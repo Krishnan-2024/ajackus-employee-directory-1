@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ajackus Employee Directory</div>
+                <nav class="nav-links">
+                    <a href="dashboard.html" class="active">Dashboard</a>
+                    <a href="form.html">Add Employee</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Dashboard Header -->
+        <section class="dashboard-header">
+            <div class="container">
+                <h1 class="dashboard-title">Employee Directory</h1>
+                <p class="dashboard-subtitle">Manage and view all employees in your organization</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Message Container -->
+            <div id="messageContainer"></div>
+
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="controls-row">
+                    <!-- Search Box -->
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search by name or email..." />
+                    </div>
+
+                    <!-- Sort Controls -->
+                    <div class="sort-controls">
+                        <label>Sort by:</label>
+                        <select class="sort-select" id="sortBy" onchange="handleSort()">
+                            <option value="firstName">First Name</option>
+                            <option value="lastName">Last Name</option>
+                            <option value="department">Department</option>
+                            <option value="role">Role</option>
+                        </select>
+                        <select class="sort-select" id="sortOrder" onchange="handleSort()">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter Button -->
+                    <button class="btn btn-secondary" id="filterBtn">
+                        🔍 Filters
+                    </button>
+
+                    <!-- Add Employee Button -->
+                    <a href="form.html" class="btn btn-primary">
+                        ➕ Add Employee
+                    </a>
+                </div>
+            </section>
+
+            <!-- Employee List -->
+            <section id="employeeContainer" class="employee-container">
+                <!-- Employee cards will be rendered here -->
+            </section>
+
+            <!-- Pagination -->
+            <section id="paginationContainer" class="pagination-container">
+                <!-- Pagination controls will be rendered here -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar" id="filterSidebar">
+        <div class="filter-header">
+            <h3 class="filter-title">Filter Employees</h3>
+            <button class="close-filter" id="closeFilter">&times;</button>
+        </div>
+        <div class="filter-content">
+            <div class="filter-group">
+                <label class="filter-label">First Name</label>
+                <input type="text" class="filter-select" id="firstNameFilter" placeholder="Enter first name...">
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Department</label>
+                <select class="filter-select" id="departmentFilter">
+                    <option value="">All Departments</option>
+                    <!-- Department options will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">Role</label>
+                <select class="filter-select" id="roleFilter">
+                    <option value="">All Roles</option>
+                    <!-- Role options will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-buttons">
+                <button class="btn btn-primary" id="applyFilters">Apply Filters</button>
+                <button class="btn btn-secondary" id="clearFilters">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 

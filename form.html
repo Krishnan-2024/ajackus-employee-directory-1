@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form - Ajackus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ajackus Employee Directory</div>
+                <nav class="nav-links">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="form.html" class="active">Add Employee</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Form Container -->
+            <div class="form-container">
+                <!-- Form Header -->
+                <div class="form-header">
+                    <h1 class="form-title" id="formTitle">Add New Employee</h1>
+                    <p class="form-subtitle" id="formSubtitle">Enter employee details below</p>
+                </div>
+
+                <!-- Message Container -->
+                <div id="messageContainer"></div>
+
+                <!-- Form Card -->
+                <div class="form-card">
+                    <form id="employeeForm" novalidate>
+                        <!-- Name Fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">
+                                    First Name <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    class="form-control" 
+                                    placeholder="Enter first name"
+                                    maxlength="50"
+                                    required
+                                />
+                                <div class="error-message" id="firstNameError"></div>
+                                <div class="char-counter" id="firstNameCounter">0/50</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">
+                                    Last Name <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    class="form-control" 
+                                    placeholder="Enter last name"
+                                    maxlength="50"
+                                    required
+                                />
+                                <div class="error-message" id="lastNameError"></div>
+                                <div class="char-counter" id="lastNameCounter">0/50</div>
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-row full-width">
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-control" 
+                                    placeholder="Enter email address"
+                                    required
+                                />
+                                <div class="error-message" id="emailError"></div>
+                                <div class="field-hint">Please enter a valid email address (e.g., john.doe@company.com)</div>
+                            </div>
+                        </div>
+
+                        <!-- Department and Role Fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="department" class="form-label">
+                                    Department <span class="required">*</span>
+                                </label>
+                                <select id="department" name="department" class="form-control" required>
+                                    <option value="">Select Department</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Sales">Sales</option>
+                                    <option value="HR">HR</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Operations">Operations</option>
+                                    <option value="Product">Product</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="error-message" id="departmentError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role" class="form-label">
+                                    Role <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="role" 
+                                    name="role" 
+                                    class="form-control" 
+                                    placeholder="Enter job role"
+                                    maxlength="50"
+                                    required
+                                />
+                                <div class="error-message" id="roleError"></div>
+                                <div class="char-counter" id="roleCounter">0/50</div>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancelBtn">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                                Reset
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                Add Employee
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html> 
