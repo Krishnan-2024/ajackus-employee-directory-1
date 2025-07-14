@@ -8,21 +8,6 @@ A professional, responsive Employee Directory web application built with vanilla
 ![CSS3](https://img.shields.io/badge/CSS-3-blue)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 
-## 📋 Table of Contents
-
-- [Features](#-features)
-- [Live Demo](#-live-demo)
-- [Screenshots](#-screenshots)
-- [Quick Start](#-quick-start)
-- [Project Structure](#-project-structure)
-- [Technologies Used](#-technologies-used)
-- [Features in Detail](#-features-in-detail)
-- [API Documentation](#-api-documentation)
-- [Challenges & Solutions](#-challenges--solutions)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
-
 ## ✨ Features
 
 ### 🎯 Core Functionality
@@ -48,12 +33,6 @@ A professional, responsive Employee Directory web application built with vanilla
 - **Cross-Browser Compatibility**: Works on all modern browsers
 - **Human-Readable Code**: Comprehensive comments explaining every logic step
 
-## 🌐 Live Demo
-
-**Try the application live:** [Employee Directory Demo](https://your-demo-link.com)
-
-*Note: Replace with your actual demo link when deployed*
-
 ## 📸 Screenshots
 
 ### Dashboard View
@@ -64,13 +43,6 @@ A professional, responsive Employee Directory web application built with vanilla
 ![Form](screenshots/form.jpeg)
 *Professional form with real-time validation and character counters*
 
-### Mobile Responsive
-![Mobile](screenshots/mobile.jpg)
-*Fully responsive design optimized for mobile devices*
-
-### Filter Sidebar
-![Filters](screenshots/filters.png)
-*Advanced filtering interface with department and role selection*
 
 *Note: Add actual screenshots to a `screenshots/` folder in your repository*
 
@@ -84,7 +56,7 @@ A professional, responsive Employee Directory web application built with vanilla
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ajackus-employee-directory.git
+   git clone https://github.com/Krishnan-2024/ajackus-employee-directory-1.git
    cd ajackus-employee-directory
    ```
 
@@ -159,34 +131,6 @@ ajackus-employee-directory/
 └── 📄 README.md                 # This file
 ```
 
-## 🛠️ Technologies Used
-
-| Technology | Purpose | Version |
-|------------|---------|---------|
-| **HTML5** | Semantic markup and structure | Latest |
-| **CSS3** | Styling with Flexbox, Grid, animations | Latest |
-| **Vanilla JavaScript** | ES6+ functionality and DOM manipulation | ES2020+ |
-| **Freemarker Templates** | Simulated backend template rendering | Mock |
-| **Responsive Design** | Mobile-first approach with media queries | - |
-
-## 📱 Features in Detail
-
-### Dashboard Page (`dashboard.html`)
-- **Employee Grid**: Responsive card layout showing employee information
-- **Search Bar**: Real-time search across names and emails with 300ms debounce
-- **Advanced Filters**: Sidebar with department and role filtering
-- **Sorting Controls**: Sort by any field in ascending/descending order
-- **Pagination**: Navigate through large datasets efficiently
-- **Action Buttons**: Edit and delete functionality for each employee
-
-### Form Page (`form.html`)
-- **Dual Mode**: Add new employees or edit existing ones
-- **Real-time Validation**: Instant feedback on form fields
-- **Character Counters**: Visual feedback for text field limits
-- **Email Validation**: Proper email format checking with regex
-- **Required Field Indicators**: Clear marking of mandatory fields
-- **Form State Management**: Handles unsaved changes warnings
-
 ### Data Management
 - **In-Memory Storage**: All data stored in JavaScript arrays
 - **CRUD Operations**: Complete Create, Read, Update, Delete functionality
@@ -223,114 +167,3 @@ employeeDataManager.filterEmployees(filters)
 // Sort employees
 employeeDataManager.sortEmployees(employees, sortBy, sortOrder)
 ```
-
-### Form Validation Rules
-
-```javascript
-{
-    firstName: { required: true, minLength: 2, maxLength: 50 },
-    lastName: { required: true, minLength: 2, maxLength: 50 },
-    email: { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
-    department: { required: true, minLength: 2, maxLength: 50 },
-    role: { required: true, minLength: 2, maxLength: 50 }
-}
-```
-
-## 🎯 Challenges & Solutions
-
-### 1. **Real-time Search Performance**
-**Challenge**: Implementing search that doesn't lag as users type
-**Solution**: Implemented debounced search with 300ms delay, preventing excessive function calls
-
-### 2. **Form Validation UX**
-**Challenge**: Creating validation that's helpful but not annoying
-**Solution**: Real-time validation on blur, error clearing on input, and character counters for user guidance
-
-### 3. **Responsive Design Complexity**
-**Challenge**: Making the interface work well on all screen sizes
-**Solution**: Mobile-first approach with CSS Grid and Flexbox, progressive enhancement for larger screens
-
-### 4. **State Management**
-**Challenge**: Managing complex state (filters, sorting, pagination) without frameworks
-**Solution**: Created modular classes with clear separation of concerns and comprehensive state tracking
-
-### 5. **Error Handling**
-**Challenge**: Graceful handling of edge cases and user errors
-**Solution**: Comprehensive validation, confirmation dialogs, and user-friendly error messages
-
-### 6. **Code Maintainability**
-**Challenge**: Writing clean, readable code without frameworks
-**Solution**: Extensive commenting, modular architecture, and consistent naming conventions
-
-## 🚀 Future Improvements
-
-### Planned Features
-- **Data Persistence**: Local storage or backend integration with real database
-- **Advanced Search**: Full-text search with multiple criteria and filters
-- **Export Functionality**: Export employee data to CSV, PDF, or Excel
-- **Bulk Operations**: Select multiple employees for batch actions
-- **Employee Photos**: Avatar upload and display functionality
-- **Department Management**: Add/edit departments and roles dynamically
-- **User Authentication**: Login system with role-based access control
-- **Audit Trail**: Track changes and modifications to employee records
-
-### Technical Enhancements
-- **Performance Optimization**: Virtual scrolling for large datasets
-- **Accessibility**: Enhanced ARIA labels and keyboard navigation
-- **Progressive Web App**: Offline functionality and app-like experience
-- **Unit Testing**: Comprehensive test coverage with Jest
-- **Build Process**: Minification, bundling, and optimization for production
-- **TypeScript**: Add type safety and better development experience
-- **State Management**: Implement a lightweight state management solution
-
-### UI/UX Improvements
-- **Dark Mode**: Toggle between light and dark themes
-- **Customizable Dashboard**: Drag-and-drop widgets and layouts
-- **Advanced Filtering**: Date ranges, salary ranges, and custom filters
-- **Data Visualization**: Charts and graphs for employee statistics
-- **Keyboard Shortcuts**: Power user features for faster navigation
-- **Multi-language Support**: Internationalization for global teams
-
-## 🤝 Contributing
-
-This is a demonstration project, but contributions are welcome:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow the existing code style and commenting patterns
-- Add comprehensive comments explaining your logic
-- Test on multiple browsers and devices
-- Ensure responsive design works correctly
-- Update documentation for any new features
-
-## 📄 License
-
-This project is created for educational and demonstration purposes as part of the Ajackus Frontend UI Assignment.
-
----
-
-## 👨‍💻 Author
-
-**Your Name** - [Your GitHub](https://github.com/yourusername)
-
-Created as part of the **Ajackus Frontend UI Assignment**
-
----
-
-## 🙏 Acknowledgments
-
-- **Ajackus** for providing this challenging and educational assignment
-- **Modern Web Standards** for making vanilla JavaScript powerful enough for complex applications
-- **CSS Grid and Flexbox** for enabling responsive design without frameworks
-- **Browser Developer Tools** for making debugging and development efficient
-
----
-
-**Note**: This application is built using only vanilla web technologies as specified in the requirements. No frameworks, libraries, or external dependencies are used, demonstrating pure HTML, CSS, and JavaScript capabilities.
-
-**⭐ If you found this project helpful, please give it a star!** 
